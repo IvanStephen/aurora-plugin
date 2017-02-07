@@ -130,4 +130,9 @@ public class ServerScript extends AbstractEntry {
 		if (cdata == null)
 			cdata = "";
 	}
+
+	@Override
+	public String getName() {
+	    return "server-script(" + new File(source).getName()+":" + lineno+")";
+    }
 }
