@@ -36,5 +36,6 @@ public class ProcedureInvoke {
 		ServiceThreadLocal.setCurrentThreadContext(auroraContext);
 		ServiceInvoker.invokeProcedureWithTransaction(serviceName, proc,
 				serviceFactory, auroraContext);
+		procedureManager.destroyContext(auroraContext);
 	}
 }
